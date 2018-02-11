@@ -5,19 +5,12 @@ class Point {
 	}
 }
 
-class Speed {
-	constructor(xSpeed, ySpeed) {
-		this.xSpeed = xSpeed;
-		this.ySpeed = ySpeed;
-	}
-}
-
 class Ball {
-	constructor(location, radius, color, speed) {
+	constructor(location, radius, color, ySpeed) {
 		this.location = location;
 		this.radius = radius;
 		this.color = color;
-		this.speed = speed;
+		this.ySpeed = ySpeed;
 	}
 	
 	draw(canvasContext) {
