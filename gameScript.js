@@ -35,6 +35,7 @@ window.setInterval(function() {
 		
 		ball.ySpeed += GRAVITY;
 		ball.location.y += ball.ySpeed;
+		ball.ySpeed += GRAVITY;
 		canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 		ball.draw(canvasContext);
 	}
