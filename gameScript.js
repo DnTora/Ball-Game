@@ -1,4 +1,4 @@
-var GRAVITY = 0.5;
+var GRAVITY = 1;
 var BALL_MOVEMENT_TIMER_INTERVAL = 20;
 
 var canvas;
@@ -35,7 +35,7 @@ window.setInterval(function() {
 		
 		ball.ySpeed += GRAVITY;
 		ball.location.y += ball.ySpeed;
-		ball.ySpeed += GRAVITY;
+		
 		canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 		ball.draw(canvasContext);
 	}
