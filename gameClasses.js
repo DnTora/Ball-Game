@@ -57,6 +57,19 @@ class TubesSegment {
 		this.topTube.draw(canvasContext);
 		this.bottomTube.draw(canvasContext);
 	}
+	
+	getTubesXLocation() {
+		return this.topTube.location.x;
+	}
+	
+	getTubesWidth() {
+		return this.topTube.size.width;
+	}
+	
+	moveTubes(xMoveAmount) {
+		this.topTube.location.x += xMoveAmount;
+		this.bottomTube.location.x += xMoveAmount;
+	}
 }
 
 class LimitedArray {
@@ -73,5 +86,26 @@ class LimitedArray {
 	
 	get(index) {
 		return this.array[index];
+	}
+	
+	getFirst() {
+		return this.array[0];
+	}
+	
+	getLast() {
+		return this.array[this.limitAmount - 1];
+	}
+}
+
+class TubesSegmentFactory {
+	constructor(tubesWidth, holeHeight, tubesColor, canvasHeight) {
+		this.tubesWidth = tubesWidth;
+		this.holeHeight = holeHeight;
+		this.tubesColor = tubesColor;
+		this.canvasHeight = canvasHeight;
+	}
+	
+	buildNewTubesSegment(tubesXLocation, holeYLocation) {
+		return new TubesSegment(tubesXLocation, this.tubesWidth, holeYLocation, this.holeHeight, this.tubesColor, this.canvasHeight);
 	}
 }
