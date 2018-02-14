@@ -16,6 +16,8 @@ function initialize() {
 	ball = new Ball(new Point(200, 300), 10, "red", 0);
 	gameInProgress = false;
 	ball.draw(canvasContext);
+	ts = new TubesSegment(300, 50, 300, 200, "black", canvas.height);
+	ts.draw(canvasContext);
 }
 
 canvas.addEventListener("click", function() {
