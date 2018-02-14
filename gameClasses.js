@@ -70,4 +70,8 @@ class LimitedArray {
 			this.array.shift();
 		this.array.push(value);
 	}
+	
+	get(index) {
+		return this.array[index];
+	}
 }
